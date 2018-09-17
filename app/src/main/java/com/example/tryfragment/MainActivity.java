@@ -15,14 +15,10 @@ implements UpperFragment.OnUpperFragmentInteractionListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(this, ThirdActivity.class));
-
         //cek apakah masing2 container sudah terisi
         if(findViewById(R.id.upperContainer)!=null){
 
-            // kalau di restore dari state sebelumnya
-            // jangan lakukan apapun untuk menghindari
-            // overlapping fragment
+            // kalau di restore dari state sebelumnya jangan lakukan apapun untuk menghindari overlapping fragment
             if(savedInstanceState!=null){
                 return;
             }

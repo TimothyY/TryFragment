@@ -31,12 +31,8 @@ public class UpperFragment extends Fragment
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_upper, container, false);
-//        btnShowGreetings =
-//                rootView.findViewById(R.id.btnShowGreetings);
+        btnShowGreetings = rootView.findViewById(R.id.btnShowGreetings);
         btnShowGreetings.setOnClickListener(this);
-        btnChangeActivity =
-                rootView.findViewById(R.id.btnChangeActivity);
-        btnChangeActivity.setOnClickListener(this);
         return rootView;
     }
 
@@ -46,10 +42,6 @@ public class UpperFragment extends Fragment
             Log.v("tryfrag","btnShowGreetings ditekan");
             Toast.makeText(getActivity(), "btnShowGreetings ditekan", Toast.LENGTH_SHORT).show();
             mListener.onUpperFragmentInteraction("btnShowGreetings ditekan");
-        }else if(v.getId()==R.id.btnChangeActivity){
-            Log.v("tryfrag","btnChangeActivity ditekan");
-            Toast.makeText(getActivity(), "btnChangeActivity ditekan", Toast.LENGTH_SHORT).show();
-            mListener.onUpperFragmentInteraction("btnChangeActivity ditekan");
         }
     }
 
